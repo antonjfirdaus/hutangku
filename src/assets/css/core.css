@@ -7316,6 +7316,13 @@ label.btn {
   --bs-btn-border-radius: 0.125rem;
 }
 
+.btn-primary{
+  color: #fff;
+  background-color: var(--bs-blue);
+  border-color: #8592a3;
+  box-shadow: 0 0.125rem 0.25rem 0 rgba(133, 146, 163, 0.4);
+}
+
 .btn-secondary {
   color: #fff;
   background-color: #8592a3;

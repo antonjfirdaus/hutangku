@@ -36,7 +36,16 @@ const transactionService = {
     } catch (error) {
       throw error;
     }
-  }
+  },
+
+  deleteById: async (id) => {
+    try {
+      const response = await axiosInstance.delete(`/transaction/delete-by-id/${id}`);
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
+  },
 };
 
 export default transactionService;

@@ -1,27 +1,22 @@
-import React, { Component, Suspense } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-// Containers
-const Layout = React.lazy(() => import('./views/layout'))
+import Home from './view/Home';
+import Login from './view/Login';
+import { PublicRoute, routes } from './routes';
 
-const loading = (
-  <div className="pt-3 text-center">
-    <div className="sk-spinner sk-spinner-pulse">Loading....</div>
-  </div>
-)
-
-class App extends Component {
-  render() {
-    return (
-      <BrowserRouter>
-        <Suspense fallback={loading}>
-          <Routes>
-            <Route path="/*" element={<Layout />} />
-          </Routes>
-        </Suspense>
-      </BrowserRouter>
-    )
-  }
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<PublicRoute component={Home} />} />
+        <Route path="/login" element={<PublicRoute component={Login} />} />
+        {routes.map((route, idx) => {
+          return (route.element && (<Route key={idx} path={route.path} exact={route.exact} element={route.element} />))
+        })}
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

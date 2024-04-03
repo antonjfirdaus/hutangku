@@ -1,0 +1,112 @@
+.bg-head {
+    background-image: url('../images/header-image.png');
+    background-position: right 50px;
+    /* Position the background image to the right */
+    background-repeat: no-repeat;
+    /* Prevent the background image from repeating */
+    background-size: 38%;
+    /* Set the background size to 50% of its original size */
+    background-origin: content-box;
+    /* Ensure padding is included in the background area */
+}
+
+.head {
+    height: 20vh;
+    position: relative;
+    /* Ensure the parent is positioned relative */
+}
+
+.head-secondary {
+    height: 12vh;
+}
+
+.head-title {
+    position: absolute;
+    /* Position the child absolutely */
+    bottom: 10px;
+}
+
+.body {
+    height: 75vh;
+    padding-top: 12px;
+    overflow-y: auto;
+}
+
+.body-secondary {
+    height: 63vh;
+    overflow-y: auto;
+}
+
+.body::-webkit-scrollbar,
+.body-secondary::-webkit-scrollbar {
+    display: none;
+}
+
+.dv-title {
+    font-weight: bold;
+    font-size: 10px;
+    margin-bottom: 0px;
+}
+
+.dv-one {
+    font-size: 10px;
+    background-color: aliceblue;
+    padding: 5px 10px;
+}
+
+.dv-two {
+    font-size: 10px;
+    background-color: rgb(252, 241, 229);
+    padding: 5px 10px;
+}
+
+.dv-three {
+    font-size: 10px;
+    background-color: rgb(255, 225, 225);
+    padding: 5px 10px;
+}
+
+.icon-in {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+
+.bg-in {
+    background: rgb(255,255,255);
+    background: linear-gradient(208deg, rgba(255,255,255,0.8127626050420168) 83%, rgba(42, 255, 78, 0.39) 100%);
+}
+
+.text-in {
+    color: #27ad0f;
+    font-size: 12px;
+}
+
+.bg-out {
+    background: rgb(255,255,255);
+    background: linear-gradient(208deg, rgba(255,255,255,0.8127626050420168) 83%, rgba(255,42,42,0.3897934173669467) 100%);
+}
+
+.text-out {
+    color: #ff2825;
+    font-size: 12px;
+}
+
+.text-date {
+    font-size: 10px;
+    font-weight: bold;
+    position: absolute;
+    z-index: 1000;
+    color: #a5a5a5;
+    right: 5px;
+    bottom: 0px;
+}
+
+.btn-delete {
+    cursor: pointer;
+    position: absolute;
+    z-index: 1000;
+    right: 5px;
+    top: 0px;
+}
