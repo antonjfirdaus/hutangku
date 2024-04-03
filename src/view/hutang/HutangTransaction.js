@@ -28,7 +28,7 @@ const HutangTransaction = () => {
             await transactionService.create(formData);
             alert('Bucket transaction created successfully');
             // Redirect to bucket list page after successful submission
-            navigate('/piutang/detail/'+id);
+            navigate('/hutang/detail/'+id);
         } catch (error) {
             console.error('Error creating bucket transaction:', error);
             alert('Failed to create bucket transaction');

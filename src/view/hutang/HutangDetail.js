@@ -50,7 +50,7 @@ const HutangDetail = () => {
     return (
         <>
             <div className="position-fixed fixed-bottom fixed-right pe-4 pb-4">
-                <a href="/hutang/create/1" className="btn btn-primary rounded-pill p-3 float-end"><i className='bx bx-plus'></i></a>
+                <a href={`/hutang/create/${id}`} className="btn btn-primary rounded-pill p-3 float-end"><i className='bx bx-plus'></i></a>
             </div>
 
             <Header />
