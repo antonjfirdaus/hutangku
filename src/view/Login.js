@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Header from  './components/Header'
 
 const Login = () => {
 
@@ -30,7 +31,9 @@ const Login = () => {
   };
 
   return (
-    <div className="container d-flex justify-content-center align-items-center vh-100">
+    <>
+      <Header/>
+    <div className="container mt-4">
       <form onSubmit={handleSubmit}>
         <div className="form-outline mb-4">
           <label className="form-label">Username</label>
@@ -45,6 +48,7 @@ const Login = () => {
         <button type='submit' className="btn btn-primary w-100 mb-4">Login</button>
       </form>
     </div>
+    </>
   );
 }
 

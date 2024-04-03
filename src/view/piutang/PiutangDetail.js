@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import bucketService from '../../service/bucket.service';
 import transactionService from '../../service/transaction.service';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Header from '../components/Header';
 
 const PiutangDetail = () => {
 
     const { id } = useParams();
-    const navigate = useNavigate();
 
     const [bucket, setBucket] = useState({ 'bucket_name': '', 'amount_total': '0', 'amount_bayar': '0', 'amount_sisa': '0' });
     const [transaction, setTransaction] = useState([]);
@@ -38,7 +37,7 @@ const PiutangDetail = () => {
 
     const handleDelete = (itemId) => {
         try {
-            const ress = transactionService.deleteById(itemId);
+            transactionService.deleteById(itemId);
             alert('Bucket transaction successfully deleted');
             // Redirect to bucket list page after successful submission
             window.location.reload();
