@@ -43,19 +43,19 @@ const Hutang = () => {
                                             <div className="col-4 px-2">
                                                 <div className="dv-one rounded">
                                                     <p className="dv-title">Total</p>
-                                                    <small>Rp{bucket.amount_total}</small>
+                                                    <small>Rp{bucket.amount_total.replace('-','')}</small>
                                                 </div>
                                             </div>
                                             <div className="col-4 px-2">
                                                 <div className="dv-two rounded">
                                                     <p className="dv-title">Dibayar</p>
-                                                    <small>Rp{bucket.amount_bayar}</small>
+                                                    <small>Rp{bucket.amount_bayar.replace('-','')}</small>
                                                 </div>
                                             </div>
                                             <div className="col-4 px-2">
                                                 <div className="dv-three rounded">
                                                     <p className="dv-title">Sisa</p>
-                                                    <small>Rp{bucket.amount_sisa}</small>
+                                                    <small>Rp{bucket.amount_sisa.replace('-','')}</small>
                                                 </div>
                                             </div>
 
